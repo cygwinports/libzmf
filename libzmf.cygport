@@ -1,0 +1,27 @@
+NAME="libzmf"
+VERSION=0.0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Zoner Draw import filter library"
+DESCRIPTION="Libzmf is a library that parses the file format of Zoner
+Callisto/Draw documents."
+HOMEPAGE="https://wiki.documentfoundation.org/DLP/Libraries/libzmf"
+SRC_URI="http://dev-www.libreoffice.org/src/libzmf/libzmf-${VERSION}.tar.xz"
+SRC_DIR="libzmf-${VERSION}"
+PATCH_URI="
+	0.0.2-ldflags.patch
+	0.0.2-vpath.patch
+"
+
+PKG_NAMES="libzmf-tools ${NAME}0.0_0 ${NAME}0.0-devel ${NAME}-doc"
+libzmf_tools_CATEGORY="Graphics"
+libzmf_tools_SUMMARY="Zoner Draw file converters"
+libzmf_tools_CONTENTS="usr/bin/*.exe"
+libzmf0_0_0_SUMMARY="${SUMMARY} (runtime)"
+libzmf0_0_0_CONTENTS="--exclude=html usr/bin/*-0.0-0.dll usr/share/doc/"
+libzmf0_0_devel_SUMMARY="${SUMMARY} (development)"
+libzmf0_0_devel_CONTENTS="usr/include/ usr/lib/"
+libzmf_doc_SUMMARY="${SUMMARY} (API documentation)"
+libzmf_doc_CONTENTS="usr/share/doc/${NAME}/html/"
+
+CYGCONF_ARGS="--disable-werror"

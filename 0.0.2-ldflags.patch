@@ -1,0 +1,8 @@
+--- origsrc/libvisio-0.0.11/src/lib/Makefile.am	2011-11-14 01:43:43.000000000 -0600
++++ src/libvisio-0.0.11/src/lib/Makefile.am	2011-11-29 17:46:19.554236900 -0600
+@@ -1,4 +1,4 @@
+-if PLATFORM_WIN32
++if OS_WIN32
+ version_info = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) -avoid-version
+ else
+ version_info = -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
