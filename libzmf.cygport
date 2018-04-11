@@ -1,6 +1,6 @@
 NAME="libzmf"
 VERSION=0.0.2
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="Zoner Draw import filter library"
 DESCRIPTION="Libzmf is a library that parses the file format of Zoner
